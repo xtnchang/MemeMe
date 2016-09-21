@@ -55,23 +55,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func pickAnImageFromAlbum (sender: AnyObject) {
         
         pickAnImage("album")
-        // Commented out code below abstracted into pickAnImage()
-        /*
-         let imagePicker = UIImagePickerController()
-         imagePicker.delegate = self
-         */
-        // presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func pickAnImageFromCamera (sender: AnyObject) {
         
         pickAnImage("camera")
-        // Commented out code below abstracted into pickAnImage()
-        /*
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        presentViewController(imagePicker, animated: true, completion: nil)
-        */
     }
  
     func pickAnImage(sourceType: String) {
