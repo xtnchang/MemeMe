@@ -12,13 +12,14 @@ class MemeCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    var memes: [Meme]!
+    var memes: [Meme] {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        memes = applicationDelegate.memes
         
         let space: CGFloat = 3.0
         
@@ -31,6 +32,12 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSizeMake(width, height)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.collectionView?.reloadData()
+    }
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.memes.count
@@ -39,11 +46,11 @@ class MemeCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCell", forIndexPath: indexPath) as! MemeCell
-        
-        let meme = memes[indexPath.item]
+    
+        let meme = self.memes[indexPath.item]
         
         // TO DO: set cell label?
-        cell.backgroundView = cell.memeImageView
+        cell.memeImageView.image = meme.memedImage
         
         return cell 
     }
