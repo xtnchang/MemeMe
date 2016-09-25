@@ -238,7 +238,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="fDl-g6-AA2">
             <objects>
-                <viewController id="Boh-4j-zAn" customClass="MemeDetailViewController" customModule="MemeMe1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="Boh-4j-zAn" customClass="MemeDetailViewController" customModule="MemeMe1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ASL-yY-Sfb"/>
                         <viewControllerLayoutGuide type="bottom" id="SSk-iQ-lCI"/>
@@ -247,10 +247,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-9i-T9f">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-9i-T9f">
                                 <rect key="frame" x="-15" y="144" width="350" height="280"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="Vge-V0-D78"/>
+                                    <constraint firstAttribute="width" constant="350" id="Kyq-4Z-G0s"/>
                                     <constraint firstAttribute="height" constant="280" id="qxr-2n-bpA"/>
                                 </constraints>
                             </imageView>
@@ -272,6 +272,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1WE-sk-WG5"/>
+        <segue reference="118-WS-z3D"/>
     </inferredMetricsTieBreakers>
 </document>
