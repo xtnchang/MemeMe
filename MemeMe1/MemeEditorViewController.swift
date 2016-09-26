@@ -118,7 +118,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
-        return true;
+        return true
     }
     
     func save() {
@@ -150,6 +150,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         return memedImage
     }
+    
     @IBAction func share(sender: AnyObject) {
         let image = UIImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
@@ -164,6 +165,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         }
         
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    // Cancel button
+    @IBAction func cancelView() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
